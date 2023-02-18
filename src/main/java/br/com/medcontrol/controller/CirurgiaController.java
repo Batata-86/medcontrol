@@ -23,4 +23,5 @@ public class CirurgiaController {
         return ResponseEntity.ok(cirurgiaService.getCirurgias());
     }
 
+
 }
