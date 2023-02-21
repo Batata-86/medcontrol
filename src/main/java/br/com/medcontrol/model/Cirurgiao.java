@@ -10,6 +10,10 @@ public class Cirurgiao extends Pessoa {
     public boolean Atuando;
     public int telefone;
 
+    public Cirurgiao(String nome, String idade, String sexo) {
+        super(nome, idade, sexo);
+    }
+
     public String getFuncao() {
         return funcao;
     }
@@ -42,7 +46,7 @@ public class Cirurgiao extends Pessoa {
         this.telefone = telefone;
     }
 
-    public Cirurgiao(String nome, String idade, String sexo) {
-        super(nome, idade, sexo);
+    //public Cirurgiao(String nome, String idade, String sexo) {
+       // super(nome, idade, sexo);
+
     }
-}
