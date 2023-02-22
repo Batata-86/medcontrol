@@ -1,7 +1,7 @@
-package br.com.medcontrol.controller;
+package br.com.medcontrol.model;
 
 
-public class Paciente extends Pessoa{
+public class Paciente extends Pessoa {
 
     public String sintomas;
     public int quantoTempo;

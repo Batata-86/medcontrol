@@ -1,7 +1,4 @@
-package br.com.medcontrol.controller;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
+package br.com.medcontrol.model;
 
 public class Cirurgiao extends Pessoa {
 
@@ -10,8 +7,12 @@ public class Cirurgiao extends Pessoa {
     public boolean Atuando;
     public int telefone;
 
-    public Cirurgiao(String nome, String idade, String sexo) {
+    public Cirurgiao(String nome, String idade, String sexo, String funcao, String crm, boolean atuando, int telefone) {
         super(nome, idade, sexo);
+        this.funcao = funcao;
+        this.crm = crm;
+        Atuando = atuando;
+        this.telefone = telefone;
     }
 
     public String getFuncao() {
@@ -44,6 +45,9 @@ public class Cirurgiao extends Pessoa {
 
     public void setTelefone(int telefone) {
         this.telefone = telefone;
+    }
+
+   // Cirurgiao[] c = new Cirurgiao[3]{
     }
 
     //public Cirurgiao(String nome, String idade, String sexo) {

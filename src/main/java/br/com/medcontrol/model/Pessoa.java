@@ -1,4 +1,4 @@
-package br.com.medcontrol.controller;
+package br.com.medcontrol.model;
 
 public class Pessoa {
     public String nome;
