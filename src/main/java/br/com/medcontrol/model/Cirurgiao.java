@@ -2,17 +2,29 @@ package br.com.medcontrol.model;
 
 public class Cirurgiao extends Pessoa {
 
-    public String funcao;
-    public String crm;
-    public boolean Atuando;
-    public int telefone;
+    // Atributos
 
-    public Cirurgiao(String nome, String idade, String sexo, String funcao, String crm, boolean atuando, int telefone) {
+    private String funcao;
+    private int crm;
+    private int telefone;
+
+    // métodos publuicos
+
+    public void apresentar(){
+        System.out.println("olá, meu nome é " + this.getNome());
+        System.out.println("sou especialista em " + this.getFuncao());
+    }
+
+    //metodos especiais
+
+
+    public Cirurgiao(String nome, String idade, String sexo, String funcao, int crm, int telefone) {
         super(nome, idade, sexo);
         this.funcao = funcao;
         this.crm = crm;
-        Atuando = atuando;
         this.telefone = telefone;
+
+
     }
 
     public String getFuncao() {
@@ -23,20 +35,12 @@ public class Cirurgiao extends Pessoa {
         this.funcao = funcao;
     }
 
-    public String getCrm() {
+    public int getCrm() {
         return crm;
     }
 
-    public void setCrm(String crm) {
+    public void setCrm(int crm) {
         this.crm = crm;
-    }
-
-    public boolean isAtuando() {
-        return Atuando;
-    }
-
-    public void setAtuando(boolean atuando) {
-        Atuando = atuando;
     }
 
     public int getTelefone() {
@@ -46,11 +50,4 @@ public class Cirurgiao extends Pessoa {
     public void setTelefone(int telefone) {
         this.telefone = telefone;
     }
-
-   // Cirurgiao[] c = new Cirurgiao[3]{
-    }
-
-    //public Cirurgiao(String nome, String idade, String sexo) {
-       // super(nome, idade, sexo);
-
-    }
+}

@@ -3,9 +3,28 @@ package br.com.medcontrol.model;
 
 public class Paciente extends Pessoa {
 
-    public String sintomas;
-    public int quantoTempo;
-    public boolean casoCirurgico;
+    //atributos
+    private String sintomas;
+    private int quantoTempo;
+    private boolean casoCirurgico;
+
+    //métodos publicos
+
+    public void consulta(){
+        if(this.casoCirurgico ){
+            System.out.println("procure um Cirurgião");
+        }else System.out.println("tome um remédio");
+    }
+
+    // métodos especiais
+
+
+    public Paciente(String nome, String idade, String sexo, String sintomas, int quantoTempo, boolean casoCirurgico) {
+        super(nome, idade, sexo);
+        this.sintomas = sintomas;
+        this.quantoTempo = quantoTempo;
+        this.casoCirurgico = casoCirurgico;
+    }
 
     public String getSintomas() {
         return sintomas;
@@ -28,13 +47,6 @@ public class Paciente extends Pessoa {
     }
 
     public void setCasoCirurgico(boolean casoCirurgico) {
-        this.casoCirurgico = casoCirurgico;
-    }
-
-    public Paciente(String nome, String idade, String sexo, String sintomas, int quantoTempo, boolean casoCirurgico) {
-        super(nome, idade, sexo);
-        this.sintomas = sintomas;
-        this.quantoTempo = quantoTempo;
         this.casoCirurgico = casoCirurgico;
     }
 }
